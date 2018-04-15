@@ -1,8 +1,9 @@
 This is small `git` tutorial and a learning-by-doing workshop for new students joining Roboy in summer semester 2018.
 
 Helpful resources:
- - [Intro slides for this workshop](...)
+ - Intro slides for this workshop are inside this repository
  - [GitHub git cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+ - [GitHub git interactive tutorial](https://try.github.io/)
 
 
 # Preparation
