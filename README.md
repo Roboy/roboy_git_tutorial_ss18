@@ -19,7 +19,8 @@ Ask the guy who does this tutorial to give you write access. You will need it la
 ## Step 0: find a team
 
 To follow this workshop you will need a team of tree (or at least a team of two). 
-Every team should have a unique number (or name). 
+Every team should have a unique number (or name). In the following workshop you will create a few branches. Always replace `xx` with your team name!
+
 After you find a team and decide on a name, every team member gets one of the three roles assigned (`A`, `B` or `C`).
 These roles will be used to specify the actions for every team member later in the workshop.
 
@@ -29,13 +30,15 @@ Clone the repository:
 `$ git clone https://github.com/Roboy/roboy_git_tutorial_ss18.git` (roles: `A`, `B` and `C`)
 
 Move into the new cloned directory:  
-`$ cd roboy_git_tutorial_ss18`
+`$ cd roboy_git_tutorial_ss18` (roles: `A`, `B` and `C`)
 
-Create a new master branch for you team (the original master branch is protected in this workshop). 
-Gi new branch,  the name (replace `xx` with your team name). Use `checkout` with the `-b` option:  
+In the next step, person `A` will create a new master branch for the team (the original master branch is protected in this workshop). 
+When you create a new branch, you should give it a good name. 
+In this workshop, name it `team-xx-master` (*replace `xx` with your team name!*). 
+Use `checkout` with the `-b` option to create a new branch and switch to it at the same time:  
 `$ git checkout -b team-xx-master` (roles: `A` only)
 
-Now, push the new branch to the server so your team members can use it as well:  
+Now, push the new branch to the server so your team members `B` and `C` can use it as well:  
 `$ git push --set-upstream origin team-xx-master` (roles: `A` only)
 
 The team members can now update their repositories and work on the new branch:  
@@ -45,9 +48,12 @@ The team members can now update their repositories and work on the new branch:
 
 
 ## Step 2: add your names
-Now, let's simulate a project development. Inside the repository, you will find a `git_tutorial.html` file. Your team will simultaneously work on it and synchronize the code with `git`.
+Now, let's simulate a project development. Inside the repository, you will find a `git_tutorial.html` file. 
+Your team will simultaneously work on it and synchronize the code with `git`.
 
-For smaller projects everyone could just work on one branch. However, this is not recommeded for larger projects, so we will use multiple branches and do it 'in a proper way'. Now, every team member creates a new branch for himself:  
+For smaller projects, everyone could just work on one branch. 
+However, this is not recommended for larger projects, so we will use multiple branches and do it 'in a proper way'. 
+Now, every team member creates a new branch for himself:  
 `$ git checkout -b team-xx-name-a` (roles: `A` only)  
 `$ git checkout -b team-xx-name-b` (roles: `B` only)  
 `$ git checkout -b team-xx-name-c` (roles: `C` only)  
@@ -86,21 +92,21 @@ Push the updated team master branch to the server:
 Before your team members `B` and `C` can push their new changes, they first need to get the latest changes from the server:  
 `$ git pull` (roles: `B` only)  
 
-The changes made by `À` should now be automatically merged with the changes made by `B`.
+The changes made by `A` should now be automatically merged with the changes made by `B`.
 Git will suggest you a merge commit message and you don't have to change it in this workshop.
-Now push the merged chages to the server:  
+Now push the merged changes to the server:  
 `$ git push` (roles: `B` only)  
 
 Now we repeat the same steps for person `C` (pull, accept merge message and push):  
 `$ git pull` (roles: `C` only)  
 `$ git push` (roles: `C` only)  
 
-Note, that merging could be done by one person as well. The person would fetch all new branches from the server, merge them all on his computer locally and push the updated version to the server.
+Note that merging could be done by one person as well. The person would fetch all new branches from the server, merge them all on his computer locally and push the updated version to the server.
 
 Once the last team member has pushed the updated team master branch, get all changes from the server with:  
 `$ git pull`  (roles: `A`, `B` and `C`)  
 
-## Step 3: change the background color
+## Step 3: change the background colour
 Previously, every team member made a change that has no conflicts with other changes. Now, we will create a situation with conflicts and resolve them. 
 
 Every team member creates a new branch:  
@@ -108,7 +114,7 @@ Every team member creates a new branch:
 `$ git checkout -b team-xx-bg-b` (roles: `B` only)  
 `$ git checkout -b team-xx-bg-c` (roles: `C` only)  
 
-Now, edit the `git_tutorial.html` file and change the background color. Every team member should change it to a different value to produce a conflict. 
+Now, edit the `git_tutorial.html` file and change the background colour. Every team member should change it to a different value to produce a conflict. 
 
 Add your changes, commit them and push to the server:  
 `$ git add .` (roles: `A`, `B` and `C`)  
@@ -121,7 +127,7 @@ So far you pushed the changes to different branches, so there are no merge confl
 This is one of the biggest advantages of `git`: everyone can work on his own branch and doesn't have to worry about breaking something.
 
 Now, let's merge all the changes in the team master branch again. 
-This time, the same line (background color) was modified, so we expect to have merge conflicts.
+This time, the same line (background colour) was modified, so we expect to have merge conflicts.
 To make merging easier, one person (`B`) will merge everything locally.
 
 First, you fetch a list of all branches from the server:  
