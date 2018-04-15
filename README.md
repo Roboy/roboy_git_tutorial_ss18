@@ -35,7 +35,7 @@ Gi new branch,  the name (replace ``xx`` with your team name). Use ``checkout`` 
 ``$ git checkout -b team-xx-master`` (roles: ``A`` only)
 
 Now, push the new branch to the server so your team members can use it as well:
-``$ git push -u team-xx-master`` (roles: ``A`` only)
+``$ git push --set-upstream origin team-xx-master`` (roles: ``A`` only)
 
 The team members can now update their repositories and work on the new branch:
 ``$ git fetch``   (roles: ``B`` and ``C`` only)
@@ -61,11 +61,11 @@ Commit your changes and give the commit a message with:
 ``$ git commit -m "changed name A/B/C"`` (roles: ``A``, ``B`` and ``C``)
 
 Push your changes to the server with:
-``$ git push -u team-xx-name-a`` (roles: ``A`` only)
-``$ git push -u team-xx-name-b`` (roles: ``B`` only)
-``$ git push -u team-xx-name-c`` (roles: ``C`` only)
+``$ git push --set-upstream origin team-xx-name-a`` (roles: ``A`` only)
+``$ git push --set-upstream origin team-xx-name-b`` (roles: ``B`` only)
+``$ git push --set-upstream origin team-xx-name-c`` (roles: ``C`` only)
 
-If you want, you can go on GitHub and check if your changes were pushed to the server correctly.
+If you want, you can go on GitHub and check whether your changes were pushed to the server correctly.
 
 Now, it is time to merge your branch into the team ``team-xx-master`` branch.
 There are several ways to do it. For now, we will use a local merge.
@@ -99,9 +99,9 @@ Now, edit the ``git_tutorial.html`` file and change the background color. Every 
 Add your changes, commit them and push to the server:
 ``$ git add .`` (roles: ``A``, ``B`` and ``C``)
 ``$ git commit -m "changed background"`` (roles: ``A``, ``B`` and ``C``)
-``$ git push -u team-xx-bg-a`` (roles: ``A`` only)
-``$ git push -u team-xx-bg-b`` (roles: ``B`` only)
-``$ git push -u team-xx-bg-c`` (roles: ``C`` only)
+``$ git push --set-upstream origin team-xx-bg-a`` (roles: ``A`` only)
+``$ git push --set-upstream origin team-xx-bg-b`` (roles: ``B`` only)
+``$ git push --set-upstream origin team-xx-bg-c`` (roles: ``C`` only)
 
 So far you pushed the changes to different branches, so there are no merge conflicts right now. 
 This is one of the biggest advantages of ``git``: everyone can work on his own branch and doesn't have to worry about breaking something.
