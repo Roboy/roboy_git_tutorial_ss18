@@ -4,6 +4,7 @@ Helpful resources:
  - Intro slides for this workshop are inside this repository
  - [GitHub git cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
  - [GitHub git interactive tutorial](https://try.github.io/)
+ - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 
 
 # Preparation
